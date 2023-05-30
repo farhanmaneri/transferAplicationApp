@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <main>
+<div class="Input_container">
+  <h1>Transfer Form</h1>
+  <div class="inputs_div">
+ 
+  <form id="myForm">
+    <!-- Gender -->
+    <label for="gender">Gender</label>
+    <select id="gender" name="title" form="Mr_Ms">
+      <option value="Mr">Mr.</option>
+      <option value="Ms">Ms.</option>
+     </select>           
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <!-- Designation -->
+        <label for="designation">Designation:</label>
+     <select id="designation" name="designation" form="Mr_Ms">
+      <option value="PSHT">PSHT</option>
+      <option value="SPST">SPST</option>
+      <option value="PST">PST</option>      
+    </select><br>
+    <label for="current_station">School/Station from where transfer:</label>
+    <input type="text" id="current_station" name="current_station">  <br>
+    <label for="to_station">School/Station where to transfer:</label>
+    <input type="text" id="to_station" name="to_station"><br/>
+    <label for="remarks">Remarks:</label>
+    <input type="text" id="remarks" name="remarks"><br/>
+    <input type="submit" id="submitButton"  value="Submit">
+  </form>
+</div>
+</div>
+<div class="print_section" id="print_section">
+<div class="application_container">
+  <div>
+    <h2>OFFICE OF THE DISTRICT OFFICER FEMALE SWABI</h2>
+  </div>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Gender</th>
+          <th>Name</th>
+        <th>Designation</th>
+        <th>Current School/Station</th>
+        <th>Transfered to School/Station</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+  <button id="myButton" onclick="print()" >Print</button>
+</div>
+
+ </main>
+
+  </body>
+  <script src="app.js"></script>
+
+</html>
