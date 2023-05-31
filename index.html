@@ -26,29 +26,59 @@
       <option value="SPST">SPST</option>
       <option value="PST">PST</option>      
     </select><br>
+   
+    <!-- current_station Lable -->
     <label for="current_station">School/Station from where transfer:</label>
+    
+    <!-- current school selection field -->
+    <select id="old_station" name="old_station"  form="old_station">
+      <option value="GGHSS">GGHSS</option>
+      <option value="GGHS">GGHS</option>
+      <option value="GGCMS">GGCMS</option>      
+      <option value="GGCMHS">GGCMHS</option>      
+      <option value="GGPS">GGPS</option>      
+    </select>
+    
+    <!-- current_station input field -->
     <input type="text" id="current_station"required name="current_station">  <br>
+    <!-- New Station label -->
     <label for="to_station">School/Station where to transfer:</label>
+    
+    <!-- New Station selection -->
+    <select id="new_station" name="new_station"  form="new_station">
+      <option value="GGHSS">GGHSS</option>
+      <option value="GGHS">GGHS</option>
+      <option value="GGCMS">GGCMS</option>      
+      <option value="GGCMHS">GGCMHS</option>      
+      <option value="GGPS">GGPS</option>      
+    </select>
+    <!-- New Station selection input field -->    
     <input type="text" id="to_station" required name="to_station"><br/>
+    <!-- Remarks -->
     <label for="remarks">Remarks:</label>
     <input type="text" id="remarks" name="remarks"><br/>
+    <!-- submit Button -->
     <input type="submit" id="submitButton"  value="Submit">
   </form>
 </div>
 </div>
 <div class="print_section" id="print_section">
-<div class="application_container">
   <div class="application_header">
+   <div>
     <image class="imageLogo" src="./public/logo.png"/>
+  </div>
     <div class="DistrictText"> 
-
-      <h3>DISTRICT EDUCATION OFFICE (FEMALE) SWABI</h3><hr>
+      
+      <h3><u>DISTRICT EDUCATION OFFICE (FEMALE) SWABI</u></h3>
       <p>(Office phone Fax No 0938280339, emisfswabi@yahoo.com)</p>
     </div>
   </div>
+  <hr>
+  <div class="application_container">
+  
   <div>
     <div>
-      <h4>TRANSFER ORDER</h4>
+      <h4><u>TRANSFER ORDER</u></h4>
       <p><span class="application_note">The competent authority is pleased to transfer the following teachers on their </span>
      own pay and BPS in the Schools noted against each in the best interest of public service with immediate effect.</p>
     </div>
@@ -99,7 +129,7 @@
     <li>District Education Monitoring Officer Swabi.  </li>
     <li>Official concerned. </li>
     <li id="sdeo">SDEO (F) Concerned.   </li>
-    <li>Principle/Head Mistress Concerned.   </li>
+    <li id="ph">Principle/Head Mistress Concerned.   </li>
   </ol>
 </div>
 <div class="Stamp">
