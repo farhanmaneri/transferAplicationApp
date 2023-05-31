@@ -14,22 +14,22 @@
     <!-- Gender -->
     <label for="gender">Gender</label>
     <select id="gender" name="title" form="Mr_Ms">
-      <option value="Mr">Mr.</option>
-      <option value="Ms">Ms.</option>
+      <option value="Mr.">Mr.</option>
+      <option value="Ms.">Ms.</option>
      </select>           
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" required name="name">
         <!-- Designation -->
         <label for="designation">Designation:</label>
-     <select id="designation" name="designation" form="Mr_Ms">
+     <select id="designation" name="designation"  form="Mr_Ms">
       <option value="PSHT">PSHT</option>
       <option value="SPST">SPST</option>
       <option value="PST">PST</option>      
     </select><br>
     <label for="current_station">School/Station from where transfer:</label>
-    <input type="text" id="current_station" name="current_station">  <br>
+    <input type="text" id="current_station"required name="current_station">  <br>
     <label for="to_station">School/Station where to transfer:</label>
-    <input type="text" id="to_station" name="to_station"><br/>
+    <input type="text" id="to_station" required name="to_station"><br/>
     <label for="remarks">Remarks:</label>
     <input type="text" id="remarks" name="remarks"><br/>
     <input type="submit" id="submitButton"  value="Submit">
@@ -38,15 +38,25 @@
 </div>
 <div class="print_section" id="print_section">
 <div class="application_container">
-  <div>
-    <h2>OFFICE OF THE DISTRICT OFFICER FEMALE SWABI</h2>
+  <div class="application_header">
+    <image class="imageLogo" src="./public/logo.png"/>
+    <div class="DistrictText"> 
+
+      <h3>DISTRICT EDUCATION OFFICE (FEMALE) SWABI</h3><hr>
+      <p>(Office phone Fax No 0938280339, emisfswabi@yahoo.com)</p>
+    </div>
   </div>
+  <div>
+    <div>
+      <h4>TRANSFER ORDER</h4>
+      <p><span class="application_note">The competent authority is pleased to transfer the following teachers on their </span>
+     own pay and BPS in the Schools noted against each in the best interest of public service with immediate effect.</p>
+    </div>
   <table id="dataTable">
     <thead>
       <tr>
-        <th>Gender</th>
-          <th>Name</th>
-        <th>Designation</th>
+        <th>S.No</th>
+          <th>Name & Designation</th>
         <th>Current School/Station</th>
         <th>Transfered to School/Station</th>
         <th>Remarks</th>
@@ -56,8 +66,53 @@
     </tbody>
   </table>
 </div>
+<div class="dic">
+  <div class="note_stamp">
+  <div class="noteMaindiv">
+    <div class="noteDiv">
+  <h3>Note:</h3>	<ol>
+    <li> Charge report should be submitted to all concerned.</li>
+    <li>TA/DA is not allowed. </li>
+  </ol> 
+</div>
+  
+</div>
+<div class="Stamp">
+  <h3>
+  (SOFIA TABASSUM)  <br>                                                                                       
+  District Education Officer <br>
+          (Female) Swabi
+</h3>
+</div>
+</div>
+<div>
+
+  <p>Endst: No.______________/Transfer/__________________/       Dated Swabi the _____________/2023<br>
+</div>
+<div class="Endst_stamp">
+<div class="Endst">
+
+    Copy of the above is forwarded for information to the: -<br></p>
+  <ol>
+    <li>Deputy Commissioner Swabi.  </li>
+    <li>District Accounts Officer Swabi.</li>
+    <li>District Education Monitoring Officer Swabi.  </li>
+    <li>Official concerned. </li>
+    <li id="sdeo">SDEO (F) Concerned.   </li>
+    <li>Principle/Head Mistress Concerned.   </li>
+  </ol>
+</div>
+<div class="Stamp">
+  <h3>  Deputy District Education Officer<br>
+    (Female) Swabi</h3>
+</div>
+</div>
+</div>
   <button id="myButton" onclick="print()" >Print</button>
 </div>
+</div>
+
+
 
  </main>
 

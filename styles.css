@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 2px;
     border-radius: 8px;
     height:min-content;
@@ -15,7 +15,7 @@ main{
     flex-wrap: wrap;
 }
 @media print {
-    .Input_container {
+    .Input_container, #myButton {
       display: none;
     }
   }
@@ -27,6 +27,8 @@ main{
     border: 1px solid green;
     padding: 3px;
     margin: 6px;
+    border-radius: 10px;
+    background: rgba(255, 253, 253, 0.692);
 }
 input{
     padding: 6px;
@@ -34,23 +36,97 @@ input{
     border: 2px solid gainsboro;
     border-radius: 6px;
 }
-#Mr{
+#gender, #designation{
     padding: 6px;
     margin: 4px;
     border: 2px solid gainsboro;
     border-radius: 6px;
 }
+.print_section{
+  width: 100%;
+}
 .application_container{
-    border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    border: 1px solid green;
     border-radius: 6px;
-    margin: 4px;
-    width: 100%;
+    margin: auto;
+    width: auto;
+    padding: 20px;
+    
+    
+}
+.application_note{
+  margin-left: 23%;
 }
 
 table {
     border-collapse: collapse;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 6px;
+    width: 100%;
   }
   th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 5px;  
   }
+  .noteMaindiv{
+    display: flex;
+    width: auto;
+    /* border: 1px solid red; */
+  }
+  .note_stamp{
+    display: flex;
+  }
+  .Endst_stamp{
+    display: flex;
+  }
+  .Endst{
+    width: auto;
+    /* border: 1px solid blue; */
+  }
+  .Stamp{
+    display: flex;
+    align-self: end;
+    width: 300px;
+    margin-left: auto;
+    width: 50%;
+text-align: center;
+margin-right: 10px;
+margin-top: 30px;
+  }
+  .Stamp{
+width: fit-content;
+    /* border: 1px solid rebeccapurple; */
+  }
+  .dic{
+    width: 100%;
+  }
+
+.application_header{
+  padding: 2px;
+  margin: 4px ;
+  display: flex;
+}
+.DistrictText{
+  margin-left: 10px;
+}
+#sdeo{
+  display: none;
+}
+.imageLogo{
+  width: 100px;
+  margin-right: 50px;
+  height: 100px;
+  /* margin: 10px 25px 5px 0px; */
+}
+#submitButton, #myButton {
+  background-color: rgb(121, 235, 121);
+  color: white;
+  font-size: medium;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
