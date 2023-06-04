@@ -12,11 +12,30 @@ event.preventDefault()
     var gender = document.getElementById('gender').value;
     var name = document.getElementById('name').value.toUpperCase();
     var designation = document.getElementById('designation').value;
-    var current_station = document.getElementById('current_station').value.toUpperCase();
-    var to_station = document.getElementById('to_station').value.toUpperCase();
-    var remarks = document.getElementById('remarks').value;
-    var old_station = document.getElementById('old_station').value;
-    var new_station = document.getElementById('new_station').value;
+    var school = document.getElementById('school').value;
+    var schoolInput = document.getElementById('schoolInput').value.toUpperCase();
+    var leaveNature = document.getElementById('leaveNature').value;
+    var service_book = document.getElementById('service_book').value;
+     // var new_station = document.getElementById('new_station').value;
+
+   var dateFrom = document.getElementById('dateFrom').value;
+   var dateUpto = document.getElementById('dateUpto').value;
+
+   partsdateFrom = dateFrom.split('-');
+   var year = partsdateFrom[0];
+   var month = partsdateFrom[1];
+   var day = partsdateFrom[2];
+   var formatLeaveFrom = day + "/" + month + "/" + year
+   partsLeaveUpto = dateUpto.split('-');
+   var years = partsLeaveUpto[0];
+   var months = partsLeaveUpto[1];
+   var days = partsLeaveUpto[2];
+   var formatLeaveUpto = days + "/" + months + "/" + years
+
+   const date1 = new Date(dateFrom);
+   const date2 = new Date(dateUpto);
+   const diffTime = Math.abs(date2 - date1);
+   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  
    
 
     var table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
@@ -28,15 +47,17 @@ event.preventDefault()
 
     var serialCell = newRow.insertCell(0)
     var nameCell = newRow.insertCell(1);
-    var current_stationCell = newRow.insertCell(2);
-    var to_stationCell = newRow.insertCell(3);
-    var remarksCell = newRow.insertCell(4);
+    var schoolCell = newRow.insertCell(2);
+    var LeavePeriodCell = newRow.insertCell(3);
+    var leaveNatureCell = newRow.insertCell(4);
+    var service_bookCell = newRow.insertCell(5);
 
     serialCell.innerHTML = rowIndex
     nameCell.innerHTML = gender +" "+name  +","+" "+ designation
-    current_stationCell.innerHTML = old_station +" "+current_station;
-    to_stationCell.innerHTML = new_station +" "+to_station;
-    remarksCell.innerHTML = remarks;
+    schoolCell.innerHTML = school +" "+ schoolInput;
+    LeavePeriodCell.innerHTML = formatLeaveFrom +" "+"to"+" "+formatLeaveUpto +" "+"(" + diffDays +" "+"Days)";
+    leaveNatureCell.innerHTML = leaveNature;
+    service_bookCell.innerHTML = service_book;
 
     document.getElementById('myForm').reset();
   
