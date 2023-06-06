@@ -10,11 +10,36 @@ const print = () => {
 event.preventDefault()
   
     var gender = document.getElementById('gender').value;
-    var name = document.getElementById('name').value.toUpperCase();
+    var name = document.getElementById("name").value;
+    var words = name.split(" ");
+    var capitalized = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    var capitalizedName = capitalized.join(" ");
+  
     var designation = document.getElementById('designation').value;
-    var current_station = document.getElementById('current_station').value.toUpperCase();
-    var to_station = document.getElementById('to_station').value.toUpperCase();
+    var current_station = document.getElementById('current_station').value;
+    var words = current_station.split(" ");
+    var capitalized = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    var currentSchool = capitalized.join(" ");
+
+    var to_station = document.getElementById('to_station').value;
+    var words = to_station.split(" ");
+    var capitalized = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    var newSchool = capitalized.join(" ");
+
     var remarks = document.getElementById('remarks').value;
+    var words = remarks.split(" ");
+    var capitalized = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    var capitalizedRemarks = capitalized.join(" ");
+
+
     var old_station = document.getElementById('old_station').value;
     var new_station = document.getElementById('new_station').value;
    
@@ -33,10 +58,10 @@ event.preventDefault()
     var remarksCell = newRow.insertCell(4);
 
     serialCell.innerHTML = rowIndex
-    nameCell.innerHTML = gender +" "+name  +","+" "+ designation
-    current_stationCell.innerHTML = old_station +" "+current_station;
-    to_stationCell.innerHTML = new_station +" "+to_station;
-    remarksCell.innerHTML = remarks;
+    nameCell.innerHTML = gender +" "+capitalizedName  +","+" "+ designation
+    current_stationCell.innerHTML = old_station +" "+currentSchool;
+    to_stationCell.innerHTML = new_station +" "+newSchool;
+    remarksCell.innerHTML = capitalizedRemarks;
 
     document.getElementById('myForm').reset();
   
