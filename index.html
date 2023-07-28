@@ -14,11 +14,15 @@
     <!-- Gender -->
     <label for="gender">Gender</label>
     <select id="gender" name="title" form="Mr_Ms">
-      <option value="Mr.">Mr.</option>
       <option value="Ms.">Ms.</option>
-     </select>           
+      <option value="Mr.">Mr.</option>
+     </select>       
+     <!-- name      -->
         <label for="name">Name:</label>
         <input type="text" id="name" required name="name">
+        <!-- cnic  -->
+        <label>CNIC #</label>
+        <input type="number" id="cnic"required placeholder="Enter CNIC Number" name="cnic">  
         <!-- Designation -->
         <label for="designation">Designation:</label>
      <select id="designation" name="designation"  form="Mr_Ms">
@@ -37,10 +41,12 @@
       <option value="GGCMS">GGCMS</option>      
       <option value="GGCMHS">GGCMHS</option>      
       <option value="GGPS">GGPS</option>      
-    </select>
+    </select> 
     
     <!-- current_station input field -->
-    <input type="text" id="current_station"required name="current_station">  <br>
+    <input type="text" id="current_station"required placeholder="Current School Name" name="current_station"> 
+    <!-- current school Emis Code  -->
+    <input type="number" id="currentEmis" required placeholder="Enter Emis Code" name="currentEmis">  <br>
     <!-- New Station label -->
     <label for="to_station">School/Station where to transfer:</label>
     
@@ -53,7 +59,10 @@
       <option value="GGPS">GGPS</option>      
     </select>
     <!-- New Station selection input field -->    
-    <input type="text" id="to_station" required name="to_station"><br/>
+    <input type="text" id="to_station" required name="to_station">
+
+    <!-- new Station emis code  -->
+    <input type="number" id="newStationEmis" placeholder="Enter Emis Code" required name="newStationEmis"><br/>
     <!-- Remarks -->
     <label for="remarks">Remarks:</label>
     <input type="text" id="remarks" name="remarks"><br/>
